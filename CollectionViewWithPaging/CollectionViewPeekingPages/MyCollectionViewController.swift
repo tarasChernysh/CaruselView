@@ -39,7 +39,7 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         
         caruselCell.backgroundColor = UIColor.random()
         
-        return caruselCell
+        return configureCell(caruselCell, forItemAt: indexPath)
     }
     
     func configureCell(_ cell: UICollectionViewCell, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
