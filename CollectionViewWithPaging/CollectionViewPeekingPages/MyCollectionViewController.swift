@@ -24,7 +24,7 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
     
     
     override func calculateSectionInset() -> CGFloat {
-        return 80
+        return 120
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,22 +38,10 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         caruselCell.configure(with: UIImage(named: item.imageName))
         
         caruselCell.backgroundColor = UIColor.random()
+        let cellCenterX = caruselCell.frame.origin.x + caruselCell.frame.width / 2
+        configure(cell: caruselCell, distanceDelta: cellCenterX)
         
-        return configureCell(caruselCell, forItemAt: indexPath)
-    }
-    
-    func configureCell(_ cell: UICollectionViewCell, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellCenterX = cell.frame.origin.x + cell.frame.width / 2
-        let distance = collectionView!.contentOffset.x + collectionView!.bounds.width / 2 - cellCenterX
-        let normalizedDistance = min(1, max(-1, distance / (collectionView!.bounds.width / 2)))
-
-        let scaleFactor: CGFloat = 0.8 // Adjust this value for the desired scale factor
-        let scale = 1 - abs(normalizedDistance) * (1 - scaleFactor)
-
-        let yOffset = abs(normalizedDistance) * collectionView.bounds.height / 5
-        cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale, y: scale)
-
-        return cell
+        return caruselCell
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -62,16 +50,21 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
 
         // Iterate through visible cells and apply the transform
         for cell in visibleCells {
-            let distance = collectionView!.contentOffset.x + collectionView!.bounds.width / 2 - (cell.frame.origin.x+(cell.frame.width/2))
-            let normalizedDistance = min(1, max(-1, distance / (collectionView!.bounds.width / 2)))
-
-            let scaleFactor: CGFloat = 0.8 // Adjust this value for the desired scale factor
-            let scale = 1 - abs(normalizedDistance) * (1 - scaleFactor)
-            
-            // Adjust the vertical position
-            let yOffset = abs(normalizedDistance) * collectionView.bounds.height / 5
-            cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale, y: scale)
+            configure(cell: cell, distanceDelta: (cell.frame.origin.x+(cell.frame.width/2)))
         }
+    }
+    
+    private func configure(cell: UICollectionViewCell, distanceDelta: CGFloat) {
+        
+        let distance = collectionView!.contentOffset.x + collectionView!.bounds.width / 2 - distanceDelta
+        let normalizedDistance = min(1, max(-1, distance / (collectionView!.bounds.width / 2)))
+
+        let scaleFactor: CGFloat = 0.8 // Adjust this value for the desired scale factor
+        let scale = 1 - abs(normalizedDistance) * (1 - scaleFactor)
+        
+        // Adjust the vertical position
+        let yOffset = abs(normalizedDistance) * collectionView.bounds.height / 5
+        cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale * 1.5, y: scale * 1.5)
     }
     
 }

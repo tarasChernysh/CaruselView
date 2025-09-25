@@ -19,9 +19,9 @@ class HorizontalPeekingPagesCollectionViewController: UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set minimum spacing for cells and lines
-        collectionViewFlowLayout.minimumInteritemSpacing = 10
-        collectionViewFlowLayout.minimumLineSpacing = 10
+        // Remove spacing between cells
+        collectionViewFlowLayout.minimumInteritemSpacing = 1
+        collectionViewFlowLayout.minimumLineSpacing = 0
         
         collectionView.backgroundColor = .gray
     }
