@@ -3,6 +3,8 @@
 
 An iOS collection view implementation that creates a beautiful carousel effect with smooth paging, 3D transformations, and interactive scrolling animations.
 
+https://github.com/user-attachments/assets/f586ed8e-8a19-4fbe-b0e3-4ff17a28c91e
+
 ## Overview
 
 This project demonstrates how to create a custom carousel view using `UICollectionView` with advanced visual effects including:
@@ -161,8 +163,4 @@ Feel free to submit issues, fork the repository, and create pull requests for an
 
 *Perfect for meditation apps, music players, image galleries, or any interface requiring elegant horizontal navigation with visual flair.*
 
-
-
-
-https://github.com/user-attachments/assets/f586ed8e-8a19-4fbe-b0e3-4ff17a28c91e
 
