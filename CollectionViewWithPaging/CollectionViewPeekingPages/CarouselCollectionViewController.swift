@@ -1,5 +1,5 @@
 //
-//  MyCollectionViewController.swift
+//  CarouselCollectionViewController.swift
 //  CollectionViewPeekingPages
 //
 //  Created by Shai Balassiano on 06/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController {
+class CarouselCollectionViewController: HorizontalPeekingPagesCollectionViewController {
     
     private let yCellPositionOffset: CGFloat = 4
 

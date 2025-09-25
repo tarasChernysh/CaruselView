@@ -91,5 +91,4 @@ class HorizontalPeekingPagesCollectionViewController: UICollectionViewController
             collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
     }
-    
 }
