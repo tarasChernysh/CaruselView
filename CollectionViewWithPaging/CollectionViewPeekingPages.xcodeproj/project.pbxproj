@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AE9A6302E85B02000851FDA /* CaruselItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9A62F2E85B02000851FDA /* CaruselItemCollectionCell.swift */; };
+		3AE9A6332E85B32300851FDA /* CaruselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9A6322E85B32300851FDA /* CaruselItem.swift */; };
 		986F17202078094500FC39A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F171F2078094500FC39A5 /* AppDelegate.swift */; };
 		986F17222078094500FC39A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F17212078094500FC39A5 /* ViewController.swift */; };
 		986F17252078094500FC39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986F17232078094500FC39A5 /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AE9A62F2E85B02000851FDA /* CaruselItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaruselItemCollectionCell.swift; sourceTree = "<group>"; };
+		3AE9A6322E85B32300851FDA /* CaruselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaruselItem.swift; sourceTree = "<group>"; };
 		986F171C2078094500FC39A5 /* CollectionViewPeekingPages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewPeekingPages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986F171F2078094500FC39A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986F17212078094500FC39A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AE9A62E2E85AFF600851FDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AE9A62F2E85B02000851FDA /* CaruselItemCollectionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AE9A6312E85B30B00851FDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AE9A6322E85B32300851FDA /* CaruselItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		986F17132078094500FC39A5 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +113,8 @@
 		986F171E2078094500FC39A5 /* CollectionViewPeekingPages */ = {
 			isa = PBXGroup;
 			children = (
+				3AE9A6312E85B30B00851FDA /* Models */,
+				3AE9A62E2E85AFF600851FDA /* Views */,
 				986F171F2078094500FC39A5 /* AppDelegate.swift */,
 				986F17212078094500FC39A5 /* ViewController.swift */,
 				986F174F20780DFD00FC39A5 /* MyCollectionViewController.swift */,
@@ -238,6 +260,8 @@
 			files = (
 				986F175020780DFD00FC39A5 /* MyCollectionViewController.swift in Sources */,
 				986F174E207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift in Sources */,
+				3AE9A6332E85B32300851FDA /* CaruselItem.swift in Sources */,
+				3AE9A6302E85B02000851FDA /* CaruselItemCollectionCell.swift in Sources */,
 				986F17222078094500FC39A5 /* ViewController.swift in Sources */,
 				986F17202078094500FC39A5 /* AppDelegate.swift in Sources */,
 			);

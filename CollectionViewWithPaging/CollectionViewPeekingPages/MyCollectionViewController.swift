@@ -10,7 +10,7 @@ import UIKit
 
 class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController {
 
-    var dataSource = [0, 1, 2, 3, 4, 5, 6] {
+    var dataSource = CaruselItem.allCases {
         didSet {
             collectionView?.reloadData()
         }
@@ -19,6 +19,8 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        collectionView.register(CaruselItemCollectionCell.self, forCellWithReuseIdentifier: CaruselItemCollectionCell.reuseIdentifier)
     }
     
     
@@ -31,8 +33,12 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
-        return configureCell(cell, forItemAt: indexPath)
+        
+        let caruselCell = collectionView.dequeueReusableCell(withReuseIdentifier: CaruselItemCollectionCell.reuseIdentifier, for: indexPath) as! CaruselItemCollectionCell
+        let item = dataSource[indexPath.item]
+        caruselCell.configure(with: UIImage(named: item.imageName))
+        
+        return caruselCell
     }
     
     func configureCell(_ cell: UICollectionViewCell, forItemAt indexPath: IndexPath) -> UICollectionViewCell {
