@@ -22,8 +22,6 @@ class HorizontalPagingCollectionViewController: UICollectionViewController {
         // Remove spacing between cells
         collectionViewFlowLayout.minimumInteritemSpacing = 1
         collectionViewFlowLayout.minimumLineSpacing = 0
-        
-        collectionView.backgroundColor = .gray
     }
     
     override func viewDidLayoutSubviews() {
