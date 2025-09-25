@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarouselCollectionViewController: HorizontalPeekingPagesCollectionViewController {
+class CarouselCollectionViewController: HorizontalPagingCollectionViewController {
     
     private let yCellPositionOffset: CGFloat = 4
 

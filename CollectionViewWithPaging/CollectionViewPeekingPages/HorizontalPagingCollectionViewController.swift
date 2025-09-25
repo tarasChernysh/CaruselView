@@ -1,5 +1,5 @@
 //
-//  CollectionViewPeekingPages.swift
+//  HorizontalPagingCollectionViewController.swift
 //  CollectionViewPeekingPages
 //
 //  Created by Shai Balassiano on 06/04/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HorizontalPeekingPagesCollectionViewController: UICollectionViewController {
+class HorizontalPagingCollectionViewController: UICollectionViewController {
     
     private var indexOfCellBeforeDragging = 0
     

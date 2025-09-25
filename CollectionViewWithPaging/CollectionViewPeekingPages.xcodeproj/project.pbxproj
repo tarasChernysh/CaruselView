@@ -14,7 +14,7 @@
 		986F17252078094500FC39A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986F17232078094500FC39A5 /* Main.storyboard */; };
 		986F17272078094700FC39A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986F17262078094700FC39A5 /* Assets.xcassets */; };
 		986F172A2078094700FC39A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986F17282078094700FC39A5 /* LaunchScreen.storyboard */; };
-		986F174E207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F174D207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift */; };
+		986F174E207809F700FC39A5 /* HorizontalPagingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F174D207809F700FC39A5 /* HorizontalPagingCollectionViewController.swift */; };
 		986F175020780DFD00FC39A5 /* CarouselCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F174F20780DFD00FC39A5 /* CarouselCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		986F172B2078094700FC39A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		986F17302078094700FC39A5 /* CollectionViewPeekingPagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewPeekingPagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		986F173B2078094700FC39A5 /* CollectionViewPeekingPagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewPeekingPagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		986F174D207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPeekingPagesCollectionViewController.swift; sourceTree = "<group>"; };
+		986F174D207809F700FC39A5 /* HorizontalPagingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalPagingCollectionViewController.swift; sourceTree = "<group>"; };
 		986F174F20780DFD00FC39A5 /* CarouselCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +119,7 @@
 				986F17212078094500FC39A5 /* ViewController.swift */,
 				986F174F20780DFD00FC39A5 /* CarouselCollectionViewController.swift */,
 				986F17232078094500FC39A5 /* Main.storyboard */,
-				986F174D207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift */,
+				986F174D207809F700FC39A5 /* HorizontalPagingCollectionViewController.swift */,
 				986F17262078094700FC39A5 /* Assets.xcassets */,
 				986F17282078094700FC39A5 /* LaunchScreen.storyboard */,
 				986F172B2078094700FC39A5 /* Info.plist */,
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				986F175020780DFD00FC39A5 /* CarouselCollectionViewController.swift in Sources */,
-				986F174E207809F700FC39A5 /* HorizontalPeekingPagesCollectionViewController.swift in Sources */,
+				986F174E207809F700FC39A5 /* HorizontalPagingCollectionViewController.swift in Sources */,
 				3AE9A6332E85B32300851FDA /* CaruselItem.swift in Sources */,
 				3AE9A6302E85B02000851FDA /* CaruselItemCollectionCell.swift in Sources */,
 				986F17222078094500FC39A5 /* ViewController.swift in Sources */,
