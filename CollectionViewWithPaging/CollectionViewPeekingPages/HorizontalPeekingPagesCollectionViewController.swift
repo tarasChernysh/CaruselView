@@ -19,7 +19,11 @@ class HorizontalPeekingPagesCollectionViewController: UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionViewFlowLayout.minimumLineSpacing = 0
+        // Set minimum spacing for cells and lines
+        collectionViewFlowLayout.minimumInteritemSpacing = 10
+        collectionViewFlowLayout.minimumLineSpacing = 10
+        
+        collectionView.backgroundColor = .gray
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +40,10 @@ class HorizontalPeekingPagesCollectionViewController: UICollectionViewController
         let inset: CGFloat = calculateSectionInset()
         collectionViewFlowLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
         
-        collectionViewFlowLayout.itemSize = CGSize(width: collectionViewLayout.collectionView!.frame.size.width - inset * 2, height: collectionViewLayout.collectionView!.frame.size.height/2)
+        collectionViewFlowLayout.itemSize = CGSize(
+            width: collectionViewLayout.collectionView!.frame.size.width - inset * 2,
+            height: collectionViewLayout.collectionView!.frame.size.height/2
+        )
     }
     
     private func indexOfMajorCell() -> Int {

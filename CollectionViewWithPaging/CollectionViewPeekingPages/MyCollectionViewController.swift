@@ -18,7 +18,6 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     
         collectionView.register(CaruselItemCollectionCell.self, forCellWithReuseIdentifier: CaruselItemCollectionCell.reuseIdentifier)
     }
@@ -37,6 +36,8 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         let caruselCell = collectionView.dequeueReusableCell(withReuseIdentifier: CaruselItemCollectionCell.reuseIdentifier, for: indexPath) as! CaruselItemCollectionCell
         let item = dataSource[indexPath.item]
         caruselCell.configure(with: UIImage(named: item.imageName))
+        
+        caruselCell.backgroundColor = UIColor.random()
         
         return caruselCell
     }
@@ -73,4 +74,16 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         }
     }
     
+}
+
+extension UIColor {
+    
+    static func random() -> UIColor {
+        return UIColor(
+            red: .random(in: 0...1),
+            green: .random(in: 0...1),
+            blue: .random(in: 0...1),
+            alpha: 1.0
+        )
+    }
 }
