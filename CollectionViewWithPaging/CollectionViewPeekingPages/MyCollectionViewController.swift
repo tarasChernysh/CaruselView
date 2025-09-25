@@ -44,6 +44,10 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         return caruselCell
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         // Get the visible cells
         let visibleCells = collectionView?.visibleCells ?? []
@@ -65,6 +69,11 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         // Adjust the vertical position
         let yOffset = abs(normalizedDistance) * collectionView.bounds.height / 5
         cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale * 1.5, y: scale * 1.5)
+        
+        // Set z-position based on distance from center - closer to center = higher z-position
+        // Use inverse of absolute normalized distance so center cell gets highest value
+        let maxZPosition: CGFloat = 1000
+        cell.layer.zPosition = maxZPosition * (1 - abs(normalizedDistance))
     }
     
 }
