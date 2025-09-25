@@ -9,6 +9,8 @@
 import UIKit
 
 class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController {
+    
+    private let yCellPositionOffset: CGFloat = 4
 
     var dataSource = CaruselItem.allCases {
         didSet {
@@ -37,7 +39,6 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         let item = dataSource[indexPath.item]
         caruselCell.configure(with: UIImage(named: item.imageName))
         
-        caruselCell.backgroundColor = UIColor.random()
         let cellCenterX = caruselCell.frame.origin.x + caruselCell.frame.width / 2
         configure(cell: caruselCell, distanceDelta: cellCenterX)
         
@@ -63,12 +64,12 @@ class MyCollectionViewController: HorizontalPeekingPagesCollectionViewController
         let distance = collectionView!.contentOffset.x + collectionView!.bounds.width / 2 - distanceDelta
         let normalizedDistance = min(1, max(-1, distance / (collectionView!.bounds.width / 2)))
 
-        let scaleFactor: CGFloat = 0.8 // Adjust this value for the desired scale factor
+        let scaleFactor: CGFloat = 0.6 // Adjust this value for the desired scale factor
         let scale = 1 - abs(normalizedDistance) * (1 - scaleFactor)
         
         // Adjust the vertical position
-        let yOffset = abs(normalizedDistance) * collectionView.bounds.height / 5
-        cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale * 1.5, y: scale * 1.5)
+        let yOffset = abs(normalizedDistance) * collectionView.bounds.height / yCellPositionOffset
+        cell.transform = CGAffineTransform(translationX: 0, y: -yOffset).scaledBy(x: scale * 1.6, y: scale * 1.6)
         
         // Set z-position based on distance from center - closer to center = higher z-position
         // Use inverse of absolute normalized distance so center cell gets highest value
